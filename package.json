@@ -1,0 +1,12 @@
+{
+  "name": "playwright-ui-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/amalsgit/playwright-ui-automation.git",
+  "author": "amal jayaraj <ajayaraj@architrave.de>",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.16.2",
+    "playwright": "^1.16.2"
+  }
+}
