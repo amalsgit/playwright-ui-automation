@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup playwright dependencies
-        run: sudo npx playwright install-deps
       - name: Install operating system dependencies
         run: yarn
+      - name: Setup playwright dependencies
+        run: yarn playwright install-deps
       - name: Run your tests
         run: yarn playwright test --browser=all
