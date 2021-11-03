@@ -1,12 +1,12 @@
-import { expect, Locator, Page } from '@playwright/test'
+import { expect, Locator, Page, request } from '@playwright/test'
 
 export class HomePage {
-  readonly page: Page
-  readonly conversionBtn: Locator
-  readonly convertFrom: Locator
-  readonly convertTo: Locator
-  readonly conversionValue: Locator
-  readonly conversionMsg: Locator
+  private readonly page: Page
+  private readonly conversionBtn: Locator
+  private readonly convertFrom: Locator
+  private readonly convertTo: Locator
+  private readonly conversionValue: Locator
+  private readonly conversionMsg: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -24,12 +24,10 @@ export class HomePage {
   }
 
   async selectFromCurrency(currency: string) {
-    await this.convertFrom.click()
     await this.convertFrom.selectOption(currency)
   }
 
   async selectToCurrency(currency: string) {
-    await this.convertTo.click()
     await this.convertTo.selectOption(currency)
   }
 

@@ -1,5 +1,5 @@
 import test from '@playwright/test'
-import { HomePage } from '../actions/ui/homePage.ui.actions'
+import { HomePage } from '../actions/ui/homePage.ui.actions.pageObject'
 
 test('Should be able to convert currency', async ({ page }) => {
   await page.goto('https://cash-conversion.dev-tester.com/')

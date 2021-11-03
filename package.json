@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "lint": "yarn eslint .",
-    "e2e": "yarn playwright test",
+    "e2e": "yarn playwright test --reporter=html",
     "headed": "yarn playwright test --headed",
-    "debug": "PWDEBUG=1 yarn playwright test"
+    "debug": "PWDEBUG=1 yarn playwright test",
+    "reports": "yarn playwright show-report"
   },
   "dependencies": {
     "@playwright/test": "^1.16.2",

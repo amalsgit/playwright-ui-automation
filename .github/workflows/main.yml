@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Install operating system dependencies
+      - name: Setup node packages
         run: yarn
       - name: Setup playwright dependencies
         run: yarn playwright install-deps
