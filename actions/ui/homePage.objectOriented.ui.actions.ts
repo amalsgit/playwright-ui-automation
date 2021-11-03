@@ -1,5 +1,7 @@
 import { expect, Locator, Page, request } from '@playwright/test'
 
+// This file is designed using the traditional page object class model.
+
 export class HomePage {
   private readonly page: Page
   private readonly conversionBtn: Locator
@@ -7,6 +9,7 @@ export class HomePage {
   private readonly convertTo: Locator
   private readonly conversionValue: Locator
   private readonly conversionMsg: Locator
+  private readonly conversionErrorMsg: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -15,6 +18,7 @@ export class HomePage {
     this.convertTo = page.locator('#to_currency')
     this.conversionValue = page.locator('#base_amount')
     this.conversionMsg = page.locator('.conversion-response')
+    this.conversionErrorMsg = page.locator('.error-message')
   }
 
   //Actions
@@ -39,6 +43,10 @@ export class HomePage {
 
   async confirmConversionMessage(message: string) {
     await expect(this.conversionMsg).toContainText(message)
+  }
+
+  async confirmConversionErrorMessage(message: string) {
+    await expect(this.conversionErrorMsg).toContainText(message)
   }
 }
 

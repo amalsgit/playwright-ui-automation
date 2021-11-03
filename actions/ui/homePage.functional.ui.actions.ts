@@ -1,6 +1,9 @@
 import { expect, Page } from '@playwright/test'
 
-//Selectors
+// This file is designed without using the traditional page object class model.
+// Instead a more functional programming approach is used
+
+// Locators
 
 const conversionBtn = '#convert_btn'
 const convertFrom = '#from_currency'
@@ -8,7 +11,7 @@ const convertTo = '#to_currency'
 const conversionValue = '#base_amount'
 const conversionMsg = '.conversion-response'
 
-//Actions
+// Actions
 export const enterConversionValue = async (page: Page, value: string) => {
   await page.type(conversionValue, value)
 }

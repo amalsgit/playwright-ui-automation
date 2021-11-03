@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "yarn eslint .",
     "e2e": "yarn playwright test --reporter=html",
-    "headed": "yarn playwright test --headed",
+    "headed": "yarn playwright test --headed -c playwright.config.ts",
     "debug": "PWDEBUG=1 yarn playwright test",
     "reports": "yarn playwright show-report"
   },
