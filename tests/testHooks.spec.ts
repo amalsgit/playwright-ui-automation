@@ -1,6 +1,8 @@
 import test from '@playwright/test'
 import faker from 'faker'
 
+// Sample test showcasing before and after hooks and sharing of variables
+
 test.describe('Testing test hooks', () => {
   let user: string
 
