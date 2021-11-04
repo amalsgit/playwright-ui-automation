@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page } from '@playwright/test'
 
 export const conversionLogger = async (page: Page) => {
   await page.route('https://cash-conversion-api.dev-tester.com/exchange_rates/convert', async route => {

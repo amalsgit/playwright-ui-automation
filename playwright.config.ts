@@ -1,8 +1,7 @@
-import { PlaywrightTestConfig } from "@playwright/test";
+import { PlaywrightTestConfig } from '@playwright/test'
 
 const testConfig: PlaywrightTestConfig = {
   use: {
-    screenshot: 'only-on-failure',
     video: 'retry-with-video',
     trace: 'retry-with-trace',
   },
@@ -10,3 +9,5 @@ const testConfig: PlaywrightTestConfig = {
   outputDir: './test-results',
   retries: 1
 }
+
+export default testConfig
