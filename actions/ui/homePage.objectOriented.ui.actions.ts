@@ -1,4 +1,4 @@
-import { expect, Locator, Page, request } from '@playwright/test'
+import { expect, Locator, Page } from '@playwright/test'
 
 // This file is designed using the traditional page object class model.
 

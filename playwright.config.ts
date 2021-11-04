@@ -1,10 +1,12 @@
-import { PlaywrightTestConfig } from "@playwright/test";
+import { PlaywrightTestConfig } from '@playwright/test'
 
 const testConfig: PlaywrightTestConfig = {
   use: {
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'retain-on-failure',
+    trace: 'retry-with-trace',
   },
   reporter: process.env.CI ? [['github'], ['dot']] : 'html',
+  outputDir: './test-results',
+  retries: 1
 }
+
+export default testConfig

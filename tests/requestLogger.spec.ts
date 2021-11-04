@@ -1,6 +1,8 @@
-import test, { expect } from '@playwright/test'
+import test from '@playwright/test'
 import { HomePage } from '../actions/ui/homePage.objectOriented.ui.actions'
 import * as conversionLogger from '../network/conversion.logger'
+
+// To demonstrate how api calls can be caught and logged
 
 test('Should be able to log api calls', async ({ page }) => {
   await page.goto('https://cash-conversion.dev-tester.com/')
