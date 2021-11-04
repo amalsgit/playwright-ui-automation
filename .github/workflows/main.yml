@@ -22,3 +22,8 @@ jobs:
         run: yarn playwright install-deps
       - name: Run your tests
         run: yarn playwright test --browser=all
+      - uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test-artifacts
+          path: test-results
