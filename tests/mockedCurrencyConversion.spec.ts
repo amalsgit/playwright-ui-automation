@@ -10,5 +10,6 @@ test('Should throw error when conversion fails', async ({ page }) => {
   await homePage.selectFromCurrency('AED')
   await homePage.selectToCurrency('EUR')
   await homePage.convertCurrency()
-  await homePage.confirmConversionErrorMessage('There was an error performing the conversion. Please try again.')
+  // This test will fail since the error message is wrong in the assertion
+  await homePage.confirmConversionErrorMessage('There was an error performing the conversion. Please again.')
 })
