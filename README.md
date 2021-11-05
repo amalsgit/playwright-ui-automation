@@ -2,6 +2,8 @@
 
 For detailed documentation of Playwright and its related API references go here https://playwright.dev/docs/intro
 
+The sample application under test is https://cash-conversion.dev-tester.com/
+
 This repo contains all the basic setup required to get started with Playwright for UI e2e automation. The tests are written in `Typescript` and project has the below files and folders defined so that a developer can start writing tests right away.
 
 - `tests` - All of the e2e tests goes here
@@ -64,3 +66,7 @@ To view the test reports after the execution with the html reporter run:
 ```
 yarn reports
 ```
+
+## CI
+
+For every commit tests will be run over the CI using Gitlab Actions.

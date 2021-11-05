@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test'
+import config from '../utils/config'
 
 export const makeApiCall = async (page: Page) => {
-  return await page.request.get('https://jsonplaceholder.typicode.com/todos/1')
+  return await page.request.get(`${config.toDoUrl}/todos/1`)
 }
