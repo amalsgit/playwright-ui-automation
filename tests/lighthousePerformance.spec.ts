@@ -4,6 +4,7 @@ import { playAudit } from 'playwright-lighthouse'
 import { test as base } from '@playwright/test'
 import findFreePorts from 'find-free-ports'
 
+// Sample front end performance test using Google Lighthouse
 
 export const lighthouseTest = base.extend<
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -41,6 +42,12 @@ lighthouseTest.describe('Lighthouse performance test', () => {
         'best-practices': 20,
         seo: 20,
         pwa: 20,
+      },
+      reports: {
+        formats: {
+          json: true,
+          html: true
+        },
       },
       port,
     })

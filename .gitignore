@@ -2,3 +2,4 @@ node_modules
 playwright-report
 .DS_Store
 test-results
+lighthouse

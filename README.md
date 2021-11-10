@@ -12,6 +12,7 @@ This repo contains all the basic setup required to get started with Playwright f
 - `utils/config.ts` - To support different configs for running tests in different evironments
 - `playwright.config.ts` - Contains all the basic configurations for Playwright including report generation, tracing etc
 - `.github/workflows/main.yml` - Giuthub Actions to run the tests over CI
+- `tests/lighthousePerformance.spec.ts` - Sample front-end performance test using Google Lighthouse
 
 ## Installation
 
