@@ -4,7 +4,7 @@ const testConfig: PlaywrightTestConfig = {
   use: {
     trace: 'retry-with-trace',
   },
-  reporter: process.env.CI ? [['github'], ['dot']] : 'html',
+  reporter: process.env.CI ? [['github'], ['dot']] : 'list',
   outputDir: './test-results',
   retries: 1
 }
