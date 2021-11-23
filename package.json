@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/amalsgit/playwright-ui-automation.git",
-  "author": "amal jayaraj <ajayaraj@architrave.de>",
+  "author": "amal jayaraj <amaljayaraj07@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "yarn eslint .",
